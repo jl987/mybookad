@@ -1,0 +1,304 @@
+@font-face {
+    font-family:fnaf-font;
+    src: url(../fonts/Hacked-KerX.ttf);
+}
+
+@font-face{
+    font-family:its-me;
+    src: url(../fonts/Volter__28Goldfish_29.ttf)
+}
+
+.freddy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/freddy.png);
+    width: 400px;
+    height: 600px;
+    z-index: 2;
+    filter: brightness(2);
+}
+
+
+
+
+.fivenights{
+    font-size: 50px;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    text-shadow: 2px 2px 4px black;
+    z-index: 3; 
+    font-family:fnaf-font;
+}
+
+.at{
+    font-size: 50px;
+    position: absolute;
+    top: 140px;
+    /* left: 49%; */
+    text-indent: 1458px;
+    transform: translateX(-50%);
+    color: red;
+    text-shadow: 8px 8px 24px black;
+    z-index: 3; 
+    font-family:fnaf-font;
+
+}
+
+.freddys{
+    font-size: 50px;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    text-shadow: 2px 2px 4px black;
+    z-index: 3; 
+    font-family:fnaf-font;
+}
+
+
+.title {
+    font-size: 120px;
+    line-height: 100px;
+    position: absolute;
+    top: 265px; 
+    text-indent: -75px;
+    left: 50%;
+    color: red;
+    color: rgb(208, 206, 206);
+    z-index: 3; 
+    font-family:fnaf-font;
+    animation: glitch 1.8s linear infinite;
+}
+
+    .silver {
+        font-size: 120px;
+        line-height: 80px;
+        position: absolute;
+        top: 380px; 
+        text-indent: -150px;
+        left: 50%;
+        /* transform: translateX(-50%); */
+        color: rgb(208, 206, 206);
+        z-index: 3; 
+        font-family: fnaf-font;
+        animation: glitch 1.5s linear infinite;
+
+    }
+    
+    
+
+
+
+.eyes {
+    font-size: 120px;
+    line-height: 100px;
+    position: absolute;
+    top: 475px; 
+    text-indent: -115px;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    color: rgb(208, 206, 206);
+    z-index: 3; 
+    font-family: fnaf-font;
+    animation: glitch 1.5s linear infinite;
+}
+
+@keyframes glitch {
+    2%, 64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%, 60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62% {
+        transform: translate(0, 0) skew(5deg); 
+    }
+}
+
+.eyes:before,
+.eyes:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+.eyes:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+    2%, 64% {
+        transform: translate(2px,-2px);
+    }
+    4%, 60% {
+        transform: translate(-2px,2px);
+    }
+    62% {
+        transform: translate(13px,-1px) skew(-13deg); 
+    }
+}
+
+.eyes:after {
+    animation: glitchBottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBottom {
+    2%, 64% {
+        transform: translate(-2px,0);
+    }
+    4%, 60% {
+        transform: translate(-2px,0);
+    }
+    62% {
+        transform: translate(-22px,5px) skew(21deg); 
+    }
+}
+
+.author1{
+    font-size: 30px;
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    text-shadow: 2px 2px 4px black;
+    font-family:fnaf-font;
+    z-index: 5; 
+
+}
+
+.author2{
+    font-size: 30px;
+    position: absolute;
+    top: 625px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    text-shadow: 2px 2px 4px black;
+    font-family:fnaf-font;
+    z-index: 6; 
+
+}
+
+.musicbox-hover {
+    top: 645px;
+    left: 0%;
+    position: absolute;
+    z-index: 7;
+    
+}
+.musicbox-checkbox {
+    display: none;
+}
+
+
+
+.musicbox-checkbox:checked ~ #overlay {
+    display: block;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    text-align: center;
+}
+
+.overlay .gif {
+    margin-top: 20%; /* Adjust as needed */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.close-btn::before,
+.close-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    background-color: #fff;
+    transform-origin: center;
+}
+
+.close-btn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close-btn:hover::before,
+.close-btn:hover::after {
+    background-color: #ccc;
+}
+
+.ialwayscomeback {
+    font-size: 30px;
+    position: absolute;
+    top:600px;
+    text-wrap: nowrap;
+font-family:its-me;
+
+}
+
+
+
+
+
+
+
+/* extra code incase I need to revisit this */
+
+
+
+
+ /* .silver{
+    font-size: 70px;
+    position: absolute;
+    top: 325px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(208, 206, 206);
+    text-shadow: 4px 4px 8px black;
+    z-index: 4; 
+} */
+
+
+
+/* .freddy {
+    margin: 0 auto;
+    margin-top: 50px; 
+    background-image:url(..//bookad/images/freddy.png);
+    width: 400px;
+    height: 600px;
+    top:0;
+    bottom: 30px;
+    position:absolute;
+    z-index:2;
+} */
